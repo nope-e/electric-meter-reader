@@ -1,0 +1,437 @@
+{
+  "description": "Fixed two-fold exploratory validation, grouped before training from visual review.",
+  "label_source": "User-organized lcd and wheel folders after moving 3 LCD photos.",
+  "grouping_note": "All silver/blue wheel views (including original 7969) stay together; all black/green wheel views (including original 7565) stay together conservatively even if different units. LCD 7284/7313 and 4886/4903 are paired repeated units. Other LCD units assigned separate groups from visual review, not independently audited. New images require manual group assignment.",
+  "images": [
+    {
+      "image": "lcd/1792403667245.jpg",
+      "group": "lcd_1792403667245",
+      "fold": 0
+    },
+    {
+      "image": "lcd/1792403667284.jpg",
+      "group": "lcd_1025440",
+      "fold": 1
+    },
+    {
+      "image": "lcd/1792403667313.jpg",
+      "group": "lcd_1025440",
+      "fold": 1
+    },
+    {
+      "image": "lcd/1792403667343.jpg",
+      "group": "lcd_1792403667343",
+      "fold": 0
+    },
+    {
+      "image": "lcd/1792403667369.jpg",
+      "group": "lcd_1792403667369",
+      "fold": 1
+    },
+    {
+      "image": "lcd/1792403667399.jpg",
+      "group": "lcd_1792403667399",
+      "fold": 0
+    },
+    {
+      "image": "lcd/1792403667424.jpg",
+      "group": "lcd_1792403667424",
+      "fold": 1
+    },
+    {
+      "image": "lcd/1792403667449.jpg",
+      "group": "lcd_1792403667449",
+      "fold": 0
+    },
+    {
+      "image": "lcd/1792403667470.jpg",
+      "group": "lcd_1792403667470",
+      "fold": 1
+    },
+    {
+      "image": "lcd/1792403667493.jpg",
+      "group": "lcd_1792403667493",
+      "fold": 0
+    },
+    {
+      "image": "lcd/1792403667511.jpg",
+      "group": "lcd_1792403667511",
+      "fold": 1
+    },
+    {
+      "image": "lcd/1792403667536.jpg",
+      "group": "lcd_1792403667536",
+      "fold": 0
+    },
+    {
+      "image": "lcd/1792403667595.jpg",
+      "group": "lcd_1792403667595",
+      "fold": 1
+    },
+    {
+      "image": "lcd/1792403667628.jpg",
+      "group": "lcd_1792403667628",
+      "fold": 0
+    },
+    {
+      "image": "lcd/1792403667658.jpg",
+      "group": "lcd_1792403667658",
+      "fold": 1
+    },
+    {
+      "image": "lcd/1792403667695.jpg",
+      "group": "lcd_1792403667695",
+      "fold": 0
+    },
+    {
+      "image": "lcd/1792403667742.jpg",
+      "group": "lcd_1792403667742",
+      "fold": 1
+    },
+    {
+      "image": "lcd/1792403667795.jpg",
+      "group": "lcd_1792403667795",
+      "fold": 0
+    },
+    {
+      "image": "lcd/1792403667833.jpg",
+      "group": "lcd_1792403667833",
+      "fold": 1
+    },
+    {
+      "image": "lcd/1792403667873.jpg",
+      "group": "lcd_1792403667873",
+      "fold": 0
+    },
+    {
+      "image": "lcd/1792403667915.jpg",
+      "group": "lcd_1792403667915",
+      "fold": 1
+    },
+    {
+      "image": "lcd/1792403668008.jpg",
+      "group": "lcd_1792403668008",
+      "fold": 0
+    },
+    {
+      "image": "lcd/1792403668045.jpg",
+      "group": "lcd_1792403668045",
+      "fold": 1
+    },
+    {
+      "image": "lcd/1792403668087.jpg",
+      "group": "lcd_1792403668087",
+      "fold": 0
+    },
+    {
+      "image": "lcd/1792403668125.jpg",
+      "group": "lcd_1792403668125",
+      "fold": 1
+    },
+    {
+      "image": "lcd/1792403668165.jpg",
+      "group": "lcd_1792403668165",
+      "fold": 0
+    },
+    {
+      "image": "lcd/1792403668205.jpg",
+      "group": "lcd_1792403668205",
+      "fold": 1
+    },
+    {
+      "image": "lcd/1792403668242.jpg",
+      "group": "lcd_1792403668242",
+      "fold": 0
+    },
+    {
+      "image": "lcd/1792403668275.jpg",
+      "group": "lcd_1792403668275",
+      "fold": 1
+    },
+    {
+      "image": "lcd/1792403668300.jpg",
+      "group": "lcd_1792403668300",
+      "fold": 0
+    },
+    {
+      "image": "lcd/1792416424865.jpg",
+      "group": "lcd_1792416424865",
+      "fold": 1
+    },
+    {
+      "image": "lcd/1792416424886.jpg",
+      "group": "lcd_777462",
+      "fold": 0
+    },
+    {
+      "image": "lcd/1792416424903.jpg",
+      "group": "lcd_777462",
+      "fold": 0
+    },
+    {
+      "image": "wheel/1792403667565.jpg",
+      "group": "wheel_black_green",
+      "fold": 1
+    },
+    {
+      "image": "wheel/1792403667969.jpg",
+      "group": "wheel_silver_blue_506",
+      "fold": 0
+    },
+    {
+      "image": "wheel/1792416423878.jpg",
+      "group": "wheel_silver_blue_506",
+      "fold": 0
+    },
+    {
+      "image": "wheel/1792416423915.jpg",
+      "group": "wheel_silver_blue_506",
+      "fold": 0
+    },
+    {
+      "image": "wheel/1792416423947.jpg",
+      "group": "wheel_silver_blue_506",
+      "fold": 0
+    },
+    {
+      "image": "wheel/1792416423981.jpg",
+      "group": "wheel_silver_blue_506",
+      "fold": 0
+    },
+    {
+      "image": "wheel/1792416424011.jpg",
+      "group": "wheel_silver_blue_506",
+      "fold": 0
+    },
+    {
+      "image": "wheel/1792416424039.jpg",
+      "group": "wheel_silver_blue_506",
+      "fold": 0
+    },
+    {
+      "image": "wheel/1792416424070.jpg",
+      "group": "wheel_silver_blue_506",
+      "fold": 0
+    },
+    {
+      "image": "wheel/1792416424095.jpg",
+      "group": "wheel_silver_blue_506",
+      "fold": 0
+    },
+    {
+      "image": "wheel/1792416424122.jpg",
+      "group": "wheel_silver_blue_506",
+      "fold": 0
+    },
+    {
+      "image": "wheel/1792416424151.jpg",
+      "group": "wheel_silver_blue_506",
+      "fold": 0
+    },
+    {
+      "image": "wheel/1792416424179.jpg",
+      "group": "wheel_silver_blue_506",
+      "fold": 0
+    },
+    {
+      "image": "wheel/1792416424207.jpg",
+      "group": "wheel_silver_blue_506",
+      "fold": 0
+    },
+    {
+      "image": "wheel/1792416424235.jpg",
+      "group": "wheel_silver_blue_506",
+      "fold": 0
+    },
+    {
+      "image": "wheel/1792416424266.jpg",
+      "group": "wheel_silver_blue_506",
+      "fold": 0
+    },
+    {
+      "image": "wheel/1792416424298.jpg",
+      "group": "wheel_silver_blue_506",
+      "fold": 0
+    },
+    {
+      "image": "wheel/1792416424328.jpg",
+      "group": "wheel_silver_blue_506",
+      "fold": 0
+    },
+    {
+      "image": "wheel/1792416424355.jpg",
+      "group": "wheel_silver_blue_506",
+      "fold": 0
+    },
+    {
+      "image": "wheel/1792416424380.jpg",
+      "group": "wheel_silver_blue_506",
+      "fold": 0
+    },
+    {
+      "image": "wheel/1792416424408.jpg",
+      "group": "wheel_silver_blue_506",
+      "fold": 0
+    },
+    {
+      "image": "wheel/1792416424435.jpg",
+      "group": "wheel_silver_blue_506",
+      "fold": 0
+    },
+    {
+      "image": "wheel/1792416424465.jpg",
+      "group": "wheel_silver_blue_506",
+      "fold": 0
+    },
+    {
+      "image": "wheel/1792416424495.jpg",
+      "group": "wheel_silver_blue_506",
+      "fold": 0
+    },
+    {
+      "image": "wheel/1792416424530.jpg",
+      "group": "wheel_silver_blue_506",
+      "fold": 0
+    },
+    {
+      "image": "wheel/1792416424560.jpg",
+      "group": "wheel_silver_blue_506",
+      "fold": 0
+    },
+    {
+      "image": "wheel/1792416424589.jpg",
+      "group": "wheel_silver_blue_506",
+      "fold": 0
+    },
+    {
+      "image": "wheel/1792416424618.jpg",
+      "group": "wheel_silver_blue_506",
+      "fold": 0
+    },
+    {
+      "image": "wheel/1792416424649.jpg",
+      "group": "wheel_silver_blue_506",
+      "fold": 0
+    },
+    {
+      "image": "wheel/1792416424681.jpg",
+      "group": "wheel_silver_blue_506",
+      "fold": 0
+    },
+    {
+      "image": "wheel/1792416424713.jpg",
+      "group": "wheel_silver_blue_506",
+      "fold": 0
+    },
+    {
+      "image": "wheel/1792416424743.jpg",
+      "group": "wheel_silver_blue_506",
+      "fold": 0
+    },
+    {
+      "image": "wheel/1792416424759.jpg",
+      "group": "wheel_silver_blue_506",
+      "fold": 0
+    },
+    {
+      "image": "wheel/1792416424775.jpg",
+      "group": "wheel_silver_blue_506",
+      "fold": 0
+    },
+    {
+      "image": "wheel/1792416424791.jpg",
+      "group": "wheel_silver_blue_506",
+      "fold": 0
+    },
+    {
+      "image": "wheel/1792416424803.jpg",
+      "group": "wheel_silver_blue_506",
+      "fold": 0
+    },
+    {
+      "image": "wheel/1792416424819.jpg",
+      "group": "wheel_silver_blue_506",
+      "fold": 0
+    },
+    {
+      "image": "wheel/1792416424834.jpg",
+      "group": "wheel_silver_blue_506",
+      "fold": 0
+    },
+    {
+      "image": "wheel/1792416424849.jpg",
+      "group": "wheel_silver_blue_506",
+      "fold": 0
+    },
+    {
+      "image": "wheel/1792416424922.jpg",
+      "group": "wheel_black_green",
+      "fold": 1
+    },
+    {
+      "image": "wheel/1792416424941.jpg",
+      "group": "wheel_black_green",
+      "fold": 1
+    },
+    {
+      "image": "wheel/1792416424962.jpg",
+      "group": "wheel_black_green",
+      "fold": 1
+    },
+    {
+      "image": "wheel/1792416424985.jpg",
+      "group": "wheel_black_green",
+      "fold": 1
+    },
+    {
+      "image": "wheel/1792416425011.jpg",
+      "group": "wheel_black_green",
+      "fold": 1
+    },
+    {
+      "image": "wheel/1792416425038.jpg",
+      "group": "wheel_black_green",
+      "fold": 1
+    },
+    {
+      "image": "wheel/1792416425063.jpg",
+      "group": "wheel_black_green",
+      "fold": 1
+    },
+    {
+      "image": "wheel/1792416425090.jpg",
+      "group": "wheel_black_green",
+      "fold": 1
+    },
+    {
+      "image": "wheel/1792416425117.jpg",
+      "group": "wheel_black_green",
+      "fold": 1
+    },
+    {
+      "image": "wheel/1792416425142.jpg",
+      "group": "wheel_black_green",
+      "fold": 1
+    },
+    {
+      "image": "wheel/1792416425163.jpg",
+      "group": "wheel_black_green",
+      "fold": 1
+    },
+    {
+      "image": "wheel/1792416425184.jpg",
+      "group": "wheel_black_green",
+      "fold": 1
+    },
+    {
+      "image": "wheel/1792416425207.jpg",
+      "group": "wheel_black_green",
+      "fold": 1
+    },
+    {
+      "image": "wheel/1792416425230.jpg",
+      "group": "wheel_black_green",
+      "fold": 1
+    }
+  ]
+}

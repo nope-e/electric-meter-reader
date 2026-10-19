@@ -1,0 +1,33 @@
+[project]
+name = "test-prj"
+version = "0.1.0"
+description = "LCD window detection experiment with ONNX Runtime"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "numpy>=2,<3",
+    "onnxruntime>=1.20,<2",
+    "opencv-python>=4.10,<5",
+    "pillow>=11",
+]
+
+[dependency-groups]
+export = [
+    "onnx>=1.17,<=1.19.1",
+    "torch>=2.6",
+    "torchvision>=0.21",
+    "ultralytics>=8.3,<9",
+]
+quality = [
+    "opencv-python-headless>=4.10,<5",
+    "pyiqa>=0.1.16",
+]
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch-cpu" }
+torchvision = { index = "pytorch-cpu" }
