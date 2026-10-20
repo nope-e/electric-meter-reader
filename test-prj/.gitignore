@@ -8,9 +8,12 @@ wheels/
 
 # Virtual environments
 .venv
+.venv-wheel-export/
 
 # Downloaded / exported weights and experiment artifacts
 models/
 results/
 .cache/
 .tmp/
+datasets/
+Ultralytics/

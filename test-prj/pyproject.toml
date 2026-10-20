@@ -12,6 +12,8 @@ dependencies = [
 ]
 
 [dependency-groups]
+data = ["pyyaml>=6,<7"]
+wheel = ["ai-edge-litert==2.3.0"]
 export = [
     "onnx>=1.17,<=1.19.1",
     "torch>=2.6",
@@ -24,10 +26,10 @@ quality = [
 ]
 
 [[tool.uv.index]]
-name = "pytorch-cpu"
-url = "https://download.pytorch.org/whl/cpu"
+name = "pytorch-cuda"
+url = "https://download.pytorch.org/whl/cu128"
 explicit = true
 
 [tool.uv.sources]
-torch = { index = "pytorch-cpu" }
-torchvision = { index = "pytorch-cpu" }
+torch = { index = "pytorch-cuda" }
+torchvision = { index = "pytorch-cuda" }

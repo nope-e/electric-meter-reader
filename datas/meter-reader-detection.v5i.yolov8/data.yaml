@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 4
+names: ['Analog', 'Digital', 'Reading', 'Serial No.']
+
+roboflow:
+  workspace: detmet
+  project: meter-reader-detection-4enbh
+  version: 5
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/detmet/meter-reader-detection-4enbh/dataset/5

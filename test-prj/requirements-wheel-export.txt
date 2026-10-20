@@ -1,0 +1,6 @@
+# Isolated converter environment; do not replace the main project environment.
+tensorflow==2.20.0
+tf2onnx==1.17.0
+onnx==1.23.2
+numpy==2.5.4
+protobuf==7.36.2

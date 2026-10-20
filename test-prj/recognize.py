@@ -1,4 +1,4 @@
-"""Read LCD digits from largest-area windows with an ONNX digit detector."""
+"""Read LCD digits from selected windows with the existing ONNX digit detector."""
 
 import argparse
 import ast
@@ -12,8 +12,9 @@ import time
 import cv2
 import numpy as np
 import onnxruntime as ort
+from PIL import Image, ImageOps
 
-from main import ROOT, decode, make_overview, preprocess, read_image, save_image
+from main import ROOT, decode, make_overview, preprocess, save_image
 
 
 def format_reading(digits):
@@ -26,12 +27,23 @@ def main():
     parser.add_argument("--model", type=Path, default=ROOT / "models/digits.onnx")
     parser.add_argument("--reference", type=Path, default=ROOT / "lcd_reference.json")
     parser.add_argument("--output", type=Path, default=ROOT / "results/lcd_recognition")
+    parser.add_argument("--meter-type", choices=['digital', 'wheel'],
+                        help='Only read images with this predicted whole-image type; no folder-label filtering')
     parser.add_argument("--conf", type=float, default=0.25)
     parser.add_argument("--iou", type=float, default=0.45)
     args = parser.parse_args()
     if not 0 < args.conf < 1 or not 0 < args.iou < 1:
         parser.error("conf/iou must be between zero and one")
+    if args.output.exists():
+        parser.error(f'Choose a new --output; destination exists: {args.output}')
     windows = json.loads(args.windows.read_text(encoding="utf-8"))
+    selected_images = windows['images']
+    if args.meter_type:
+        if any(item.get('meter_type') not in ('digital', 'wheel') for item in selected_images):
+            parser.error('--meter-type requires predicted digital/wheel types on all input rows')
+        selected_images = [item for item in selected_images if item['meter_type'] == args.meter_type]
+    if not selected_images:
+        parser.error('No images selected for recognition')
     reference = json.loads(args.reference.read_text(encoding="utf-8"))
     options = ort.SessionOptions()
     options.intra_op_num_threads = 4
@@ -42,17 +54,24 @@ def main():
     names = {int(k): v for k, v in names.items()}
     session.run(None, {model_input.name: np.zeros(model_input.shape, np.float32)})
     results, overview = [], []
-    for item in windows["images"]:
+    for item in selected_images:
         path = Path(item["image"])
         label = reference["labels"].get(path.name, {"raw_digits": None, "reason": "unlabeled"})
-        result = {"image": str(path), "reference": label, "raw_digits": "", "reading": None,
+        result = {"image": str(path), "meter_type": item.get('meter_type'),
+                  "reference": label, "raw_digits": "", "reading": None,
                   "min_digit_score": None, "mean_digit_score": None, "digit_detections": [],
                   "inference_ms": None, "status": "no_window", "reasons": [], "exact_match": None}
         if not item["detections"]:
+            if label['raw_digits'] is not None:
+                result['exact_match'] = False
             results.append(result)
             continue
         start = time.perf_counter()
-        image = read_image(path)
+        # Use the same orientation-corrected pixels as the area pipeline, not saved JPEG crops.
+        with Image.open(path) as source:
+            image = np.asarray(ImageOps.exif_transpose(source).convert('RGB'))[:, :, ::-1].copy()
+        if 'width' in item and (image.shape[1], image.shape[0]) != (item['width'], item['height']):
+            raise ValueError(f'Window/image size mismatch: {path}')
         window = item["detections"][0]
         x1, y1, x2, y2 = window["xyxy"]
         x1, y1, x2, y2 = math.floor(x1), math.floor(y1), math.ceil(x2), math.ceil(y2)
@@ -100,14 +119,21 @@ def main():
     scored = [r for r in results if r["exact_match"] is not None]
     matched = sum(r["exact_match"] for r in scored)
     summary = {"model": str(args.model), "model_sha256": hashlib.sha256(args.model.read_bytes()).hexdigest(),
-               "windows_file": str(args.windows), "reference_file": str(args.reference),
+               "windows_file": str(args.windows),
+               "windows_sha256": hashlib.sha256(args.windows.read_bytes()).hexdigest(),
+               "window_pipeline": windows.get('summary'),
+               "meter_type_filter": args.meter_type,
+               "input_image_count": len(windows['images']),
+               "skipped_by_type": len(windows['images'])-len(selected_images),
+               "reference_file": str(args.reference),
                "reference_sha256": hashlib.sha256(args.reference.read_bytes()).hexdigest(),
                "runtime": f"onnxruntime {ort.__version__}", "input_shape": model_input.shape, "class_names": names,
                "confidence_threshold": args.conf, "nms_iou_threshold": args.iou, "class_agnostic_nms": True,
                "image_count": len(results), "labeled_readable_count": len(scored), "exact_matches": matched,
                "exact_match_rate_on_readable_subset": matched / len(scored) if scored else None,
                "unscored_count": len(results) - len(scored),
-               "median_digit_inference_ms": float(np.median([r["inference_ms"] for r in results if r["inference_ms"] is not None])),
+               "median_digit_inference_ms": float(np.median([r["inference_ms"] for r in results if r["inference_ms"] is not None]))
+                   if any(r['inference_ms'] is not None for r in results) else None,
                "reference_source": reference["source"],
                "note": "Scores are detector scores, not calibrated reading correctness. Candidate output is not auto-accepted. Desktop CPU timings only."}
     args.output.mkdir(parents=True, exist_ok=True)
@@ -122,6 +148,9 @@ def main():
             writer.writerow(row)
     if overview:
         make_overview(overview, args.output / "overview.jpg", columns=3, tile_w=800, tile_h=260)
+        for start in range(0, len(overview), 12):
+            make_overview(overview[start:start+12], args.output / f'overview_{start//12:02}.jpg',
+                          columns=3, tile_w=800, tile_h=260)
     print(json.dumps(summary, ensure_ascii=False, indent=2))
 
 

@@ -1,13 +1,127 @@
 # 电表类型分类、LCD 窗口检测与数字识别实验
 
+当前部署模型和完整输入输出/前后处理说明已整理到项目根目录 [models/README.md](../models/README.md)，包含 5 个 ONNX、文件哈希、独立 ONNX Runtime 参考流程和 104 张本地照片的一致性核验。原实验模型目录继续保留。
+
 LCD 窗口定位和数字识别使用现成模型；新增的 LCD / 滚轮表分类使用本地照片微调 MobileNetV3-small。LCD 原图输入默认为 `../datas/lcd`，类型分类默认读取 `../datas`。
+
+全部 104 张自拍照片的最新统一回测见 [ALL_LOCAL_RESULTS.md](ALL_LOCAL_RESULTS.md)：98 张有可评分参考，整串一致 79 张（80.6%）；LCD 27/28（96.4%），wheel 52/70（74.3%）。另 6 张参考不确定单列；漏窗口计失败。可用 `evaluate_local_meters.py --output results\all_local_meters_recheck` 重跑，逐图结果在 `results/all_local_meters/evaluation.csv`。
+
+## 滚轮表：模型检测轮位 + VisionState 识别
+
+新增入口 `recognize_wheel_slots.py`：整图分类 → area → 单类 YOLO11n 轮位检测 → VisionState ONNX。轮位数由实际检测决定，支持 5/6 位，不进行固定数量补位。轮位权重为 `models/wheel_slots/wheel_slots.onnx`，VisionState 继续使用 `models/visionstate/wheels-v1.onnx`；原 LCD 识别模型不变。
+
+```powershell
+# 新图完整流程；输出目录需要不存在
+.\.venv\Scripts\python.exe recognize_wheel_slots.py --input ..\datas\test_wheel --output results\wheel_fresh
+# 同一分类/area 结果下比较轮位模型
+.\.venv\Scripts\python.exe recognize_wheel_slots.py --windows results\test_wheel_area_v2\detections.json --output results\wheel_recheck
+```
+
+第三版按用户授权加入 7 张实拍训练照片，同一块表的照片整组划分，另有 2 张验证、5 张分组留出；原 18 张目录已用于适配，不能再把整批回测当独立测试准确率。标注扩大为完整轮位窗口，默认给 area 读入少量周边像素（`--area-context .10`）；轮位裁图每侧留宽 8%、高 10%，从原照片取像素。实际框、模型输入和读数对照见 [WHEEL_SLOT_RESULTS.md](WHEEL_SLOT_RESULTS.md)。旧 OpenCV 切位及 class100/VisionState 固定裁图比较保留在原入口和历史报告中。
+
+## 整图分类 + area 窗口检测
+
+当前实验采用两个独立 ONNX 模型：整图 MobileNet 判断 `digital/wheel`，YOLO11n 只检测一个 `area` 类。整图分类复用 `models/meter_type_cnn/meter_type.onnx`，在组合接口把原 `lcd` 类名映射成 `digital`；分类依据完整图片像素，读数区检测不会决定表型。area 训练及 ONNX 核验已完成，改用置信度优先选框后，本地目视读数区位置覆盖为 digital 33/33、wheel 52/53（包括部分裁边情况，不代表完整数字覆盖），详见下方报告。
+
+单类检测数据来自已复核的 601 张图、609 个窗口，只把原来的 lcd/wheel 框合并成 area，图片、坐标及 train/valid/test 划分保持一致。未将整张图框入 area。
+
+```powershell
+# 仅首次准备数据；已有输出时会拒绝覆盖
+.\.venv\Scripts\python.exe prepare_area_data.py
+# 单类 area 对照训练，自动测试、导出、核验
+.\.venv\Scripts\python.exe -u train_meter_windows.py --single-area
+# 训练完成后，组合两个模型测试本地 lcd 与 wheel 文件夹
+.\.venv\Scripts\python.exe detect_meter_area.py
+# 任意文件或文件夹，输出使用新目录
+.\.venv\Scripts\python.exe detect_meter_area.py --input photo.jpg --output results\area_single
+```
+
+area 模型输出为 `models/meter_area/area.onnx`，训练状态为 `models/meter_area/area_yolo11n.status.json`。组合接口先做 conf=0.25 过滤和 IoU=0.45 的 NMS，再选置信度最高的候选，仅同分时取面积较大的框。保存所有候选坐标供检查；预览灰框表示其他候选，绿框表示选中的 area。默认输出 `results/meter_area_confidence/detections.json`、原图预览、裁剪及分页面总览。重复运行需换 `--output`，避免覆盖既有对照结果。可用 `--selection largest_area` 复现旧选法，默认是 `--selection confidence`。
+对照设置、评估口径和结果见 [AREA_RESULTS.md](AREA_RESULTS.md)。
+
+Python 接口可复用会话：
+
+```python
+from PIL import Image, ImageOps
+from detect_meter_area import MeterAreaPipeline
+
+pipeline = MeterAreaPipeline()
+with Image.open("photo.jpg") as photo:
+    result = pipeline.predict(ImageOps.exif_transpose(photo).convert("RGB"))
+print(result["meter_type"], result["detections"])
+```
+
+使用当前分类与 area 结果，只对预测为 digital 的图片运行原数字识别模型：
+
+```powershell
+.\.venv\Scripts\python.exe recognize.py --windows results\meter_area_confidence\detections.json --meter-type digital --output results\area_digital_recognition
+```
+
+已测试 33 张 digital，原有人工参考 25 张中 24 张完全一致（96%）；`1792403668125.jpg` 漏掉末位 6，其余 8 张没有可评分参考。读数模型和识别阈值未改变，详细结果与旧窗口对照见 [RECOGNITION_RESULTS.md](RECOGNITION_RESULTS.md)。
+
+整图分类模型用全部 86 张本地照片训练过，原图分类匹配属于训练集回测。area 对照实验不使用这些原图训练。旧两类窗口模型仅忽略类别的几何基线位于 `results/meter_area_previous/`，复现命令为：
+
+```powershell
+.\.venv\Scripts\python.exe detect_meter_area.py --area-model models\meter_windows\meter_windows.onnx --collapse-types --selection largest_area --output results\area_previous_recheck
+```
 
 实测结论、误检案例及运行边界见 [TEST_RESULTS.md](TEST_RESULTS.md)。
 数字识别结果及人工对照说明见 [RECOGNITION_RESULTS.md](RECOGNITION_RESULTS.md)。
 LCD 画质/可读性探索见 [QUALITY_RESULTS.md](QUALITY_RESULTS.md)。
 类型分类的全量训练结果与历史分组验证见 [METER_TYPE_RESULTS.md](METER_TYPE_RESULTS.md)。
+两类读数窗口检测的数据合并规则、数量与核验结果见 [WINDOW_DATA_RESULTS.md](WINDOW_DATA_RESULTS.md)。新模型已完成训练与 ONNX 导出，测试集及本地原图结果见 [WINDOW_TRAINING_RESULTS.md](WINDOW_TRAINING_RESULTS.md)。本地滚轮表仍有大量漏检、误分类和错框。
+
+## 两类读数窗口数据
+
+历史 [VisionState ONNX 滚轮识别器对照](VISIONSTATE_RESULTS.md)：保持旧切位不变，在同批 13 张有候选图片中，助手目视初核从 class100 的 2 张提升至约 10 张，待用户确认。新轮位模型入口见上文。
+
+滚轮测试图及删图后的旧切位复测见 [TEST_WHEEL_RESULTS.md](TEST_WHEEL_RESULTS.md)：18 张，分类 18/18、area 14/18、旧切位推理 13/18；这些是新轮位检测前的历史基线。
+
+已把 `../datas` 下四个 Roboflow YOLO 导出合并到 `datasets/meter_windows/`，训练配置为 `datasets/meter_windows/data.yaml`。类别顺序是 `lcd, wheel`：`lcd` 包含 LCD、LED 等电子数字屏，`wheel` 为机械数字滚轮。模型目标是整条读数区域。
+
+`meter-reader-detection` 保留 `Reading` 框的位置，根据对应的 `Digital/Analog` 整表标签赋予 `lcd/wheel` 类别；整表框和序列号框不参与训练。原始下载内容保持不变。
+
+```powershell
+uv sync --group data --cache-dir .cache\uv
+# 核验已生成的数据
+.\.venv\Scripts\python.exe merge_window_data.py --verify-only
+# 复现合并，使用新目录，避免覆盖已有结果
+.\.venv\Scripts\python.exe merge_window_data.py --output datasets\meter_windows_rebuilt
+.\.venv\Scripts\python.exe -m unittest test_merge_window_data -v
+```
+
+训练环境的 `export` 依赖组使用 CUDA 12.8 PyTorch，已在本机 RTX 4060 Laptop GPU 上验证 CUDA 计算：
+
+```powershell
+uv sync --group export --group data --cache-dir .cache\uv
+.\.venv\Scripts\python.exe -u train_meter_windows.py
+# 中断后恢复同一次训练
+.\.venv\Scripts\python.exe -u train_meter_windows.py --resume
+```
+
+默认以 `models/display.pt` 的 YOLO11n 窗口检测权重微调两类，输入 640、batch 16、最多 100 轮、验证集 mAP50-95 连续 20 轮无改善时早停。使用 499 张训练图片，60 张验证图片选最优权重，最后只评估一次 42 张测试图片。训练使用 FP32，禁用新增的水平/垂直翻转。
+
+训练记录和权重位于 `models/meter_windows/reading_yolo11n/`；当前启动命令的日志为 `results/window_training.log`。每轮更新 `models/meter_windows/reading_yolo11n.status.json`。脚本完成后自动评估测试集、导出固定 `[1,3,640,640]`、FP32、opset 12 ONNX，并在六张测试图片上比较 PyTorch/ONNX 原始输出与 NMS 后的框及类别。核验通过后才生成 `models/meter_windows/meter_windows.onnx`，原有 `display.onnx` 保留。
+
+已用现有运行器测试本地原图，仍采用最大面积窗口；结果与预览位于下列命令对应的输出目录：
+
+```powershell
+.\.venv\Scripts\python.exe main.py --model models\meter_windows\meter_windows.onnx --input ..\datas\wheel --output results\window_wheel
+.\.venv\Scripts\python.exe main.py --model models\meter_windows\meter_windows.onnx --input ..\datas\lcd --output results\window_lcd
+```
 
 ## LCD / 滚轮表分类
+
+当前 wheel 分类与 area 结果已接入对话中提到的 AI-on-the-edge 单轮位 `dig-class100 / dig-cont` 预训练模型：
+
+```powershell
+uv sync --cache-dir .cache\uv
+.\.venv\Scripts\python.exe prepare_wheel_model.py
+# 首次转换见 WHEEL_RECOGNITION_RESULTS.md；已有 models/wheel/*.onnx 时直接运行
+.\.venv\Scripts\python.exe recognize_wheel.py
+```
+
+53 张预测 wheel 中，52 张有 area，46 张完成切位并运行识别。清晰图能得到 `00373.3`、`3661.3` 等候选，斜拍/模糊、切位误差和整数附近状态取整仍不稳定，未统计独立准确率。两个滚轮模型均已转为 ONNX，默认使用 ONNX Runtime；262 个实际轮位和 434 个合成输入的两个模型输出均与原生 TFLite 逐值一致。当前结果在 `results/area_wheel_onnx/`，原生基线保留在 `results/area_wheel_readings/`。输入为 float32 RGB NHWC `[1,32,20,3]`、像素 0～255，不做 /255。转换、核验和小程序验证边界见 [WHEEL_RECOGNITION_RESULTS.md](WHEEL_RECOGNITION_RESULTS.md)。
 
 已生成 `models/meter_type_cnn/meter_type.onnx`，运行阶段仅用 ONNX Runtime，输入整张照片，不依赖文件名或目录标签：
 

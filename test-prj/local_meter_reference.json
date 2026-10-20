@@ -1,0 +1,856 @@
+{
+  "source": "Assistant visual transcription and review, not independent field ground truth. Existing LCD exclusions preserved; three previously unlabeled LCD frames and original wheel photos visually reviewed this run. Never use model predictions as labels.",
+  "wheel_convention": "Keep leading zeros; unfinished carry reads previous digit; last wheel is one decimal place.",
+  "review_artifacts": "results/all_local_meters/reference_review/",
+  "labels": {
+    "lcd/1792403667245.jpg": {
+      "source_sha256": "e8d05ffbc6e47174ff3826b752ddd025f14e52485a9b75098ee8e3829de438bc",
+      "meter_type": "digital",
+      "decimal_places": 2,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": "1013964",
+      "reference_origin": "lcd_reference.json preserved"
+    },
+    "lcd/1792403667284.jpg": {
+      "source_sha256": "ea567b4dc57687b8b50d87300ef3c29d56ce4b25d8286dd8f36bd13adde1c88e",
+      "meter_type": "digital",
+      "decimal_places": 2,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": null,
+      "reason": "right_edge_truncated",
+      "reference_origin": "lcd_reference.json preserved"
+    },
+    "lcd/1792403667313.jpg": {
+      "source_sha256": "a8d062135536afdcdec91329bc473ab4f20953586086bbe3e38864a592f428af",
+      "meter_type": "digital",
+      "decimal_places": 2,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": "1025440",
+      "reference_origin": "lcd_reference.json preserved"
+    },
+    "lcd/1792403667343.jpg": {
+      "source_sha256": "c3d22475eaaad0e915eb86ffce65e6f4a6af7b950484ef088cce0511cc287687",
+      "meter_type": "digital",
+      "decimal_places": 2,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": "1031488",
+      "reference_origin": "lcd_reference.json preserved"
+    },
+    "lcd/1792403667369.jpg": {
+      "source_sha256": "d1fc81985c90932a1b9c3ca35ba3588fb54b665bc1108366b46c9001e2042948",
+      "meter_type": "digital",
+      "decimal_places": 2,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": "1060957",
+      "reference_origin": "lcd_reference.json preserved"
+    },
+    "lcd/1792403667399.jpg": {
+      "source_sha256": "66a6c96a8c12917ddf8c0a19318b99a6860ffe617540c40a6abe6133d2aa5b5e",
+      "meter_type": "digital",
+      "decimal_places": 2,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": "1065846",
+      "reference_origin": "lcd_reference.json preserved"
+    },
+    "lcd/1792403667424.jpg": {
+      "source_sha256": "893125584807a43219f037fca39f8aba4c0f497eb7a64191d077aa1425ca9be2",
+      "meter_type": "digital",
+      "decimal_places": 2,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": "1067831",
+      "initial_transcription": "1061831",
+      "review_note": "Corrected after inspecting enlarged unannotated crop: fourth digit has a visible top segment (7).",
+      "reference_origin": "lcd_reference.json preserved"
+    },
+    "lcd/1792403667449.jpg": {
+      "source_sha256": "8c5ae48412b4ccc9820bdf4d78a5a6652ada8813e259e8110334f129f18f683a",
+      "meter_type": "digital",
+      "decimal_places": 2,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": "770354",
+      "reference_origin": "lcd_reference.json preserved"
+    },
+    "lcd/1792403667470.jpg": {
+      "source_sha256": "34a13d6f0eec60d645efb91cb8549a90866a19c18275029f723b705847495145",
+      "meter_type": "digital",
+      "decimal_places": 2,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": "728812",
+      "reference_origin": "lcd_reference.json preserved"
+    },
+    "lcd/1792403667493.jpg": {
+      "source_sha256": "49bc86c022c82bb143f3a01e8bcfce626b0efbce75b756807c4e29b715ce50e3",
+      "meter_type": "digital",
+      "decimal_places": 2,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": null,
+      "reason": "glare_obscures_digits",
+      "reference_origin": "lcd_reference.json preserved"
+    },
+    "lcd/1792403667511.jpg": {
+      "source_sha256": "e1a0dfba8211153b89677a038cbe50c541db225cd0c58e8b61ada2d8c92490b1",
+      "meter_type": "digital",
+      "decimal_places": 2,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": "483165",
+      "reference_origin": "lcd_reference.json preserved"
+    },
+    "lcd/1792403667536.jpg": {
+      "source_sha256": "04118e3a5d7437980fc16991fe88afdad704b73200c061047a98d5f1c9507fcd",
+      "meter_type": "digital",
+      "decimal_places": 2,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": "807783",
+      "reference_origin": "lcd_reference.json preserved"
+    },
+    "lcd/1792403667595.jpg": {
+      "source_sha256": "d698c8c2f37c2da27cf675ebb72269bf5c0ed88a07c8bab038b98fd4599e9649",
+      "meter_type": "digital",
+      "decimal_places": 2,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": null,
+      "initial_transcription": "957356",
+      "reason": "middle_digits_ambiguous_under_reflection_on_full_resolution_review",
+      "reference_origin": "lcd_reference.json preserved"
+    },
+    "lcd/1792403667628.jpg": {
+      "source_sha256": "7e7b6a8563f5d0d3439c70cb3fb10fa98f751bce62bbff7ced364cd1953f44d9",
+      "meter_type": "digital",
+      "decimal_places": 2,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": "824945",
+      "initial_transcription": "924945",
+      "review_note": "Corrected after enlarged unannotated crop inspection: lower-left segment of first digit is visible (8).",
+      "reference_origin": "lcd_reference.json preserved"
+    },
+    "lcd/1792403667658.jpg": {
+      "source_sha256": "1cc6e0d568368981204a4f5e1fb204cc1ae84773b131b510b7a5c43e5538bd3a",
+      "meter_type": "digital",
+      "decimal_places": 2,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": "903780",
+      "initial_transcription": "903180",
+      "review_note": "Corrected after enlarged unannotated crop inspection: fourth digit has a visible top segment (7).",
+      "reference_origin": "lcd_reference.json preserved"
+    },
+    "lcd/1792403667695.jpg": {
+      "source_sha256": "e9b293979ecd4904649c3b9c188ca66f84eef2c1b1ca8e3e207e6dd00d573ab5",
+      "meter_type": "digital",
+      "decimal_places": 2,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": "692520",
+      "reference_origin": "lcd_reference.json preserved"
+    },
+    "lcd/1792403667742.jpg": {
+      "source_sha256": "777c96823189bcb3ca08424538781aae33769d6159e13b7227b9eff27b303fae",
+      "meter_type": "digital",
+      "decimal_places": 2,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": "775582",
+      "initial_transcription": "715582",
+      "review_note": "Corrected after enlarged unannotated crop inspection: second digit has a visible top segment (7).",
+      "reference_origin": "lcd_reference.json preserved"
+    },
+    "lcd/1792403667795.jpg": {
+      "source_sha256": "e1f0ffc0c6c3c390c51ed10275a0651e9e8f3cee3bde1d7ee75382ff934c2ffe",
+      "meter_type": "digital",
+      "decimal_places": 2,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": "840082",
+      "reference_origin": "lcd_reference.json preserved"
+    },
+    "lcd/1792403667833.jpg": {
+      "source_sha256": "7c32fff1def82cb66ee9047eed3d48dfca906fcfed604dae9141418b9a3e0b2f",
+      "meter_type": "digital",
+      "decimal_places": 2,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": "745981",
+      "reference_origin": "lcd_reference.json preserved"
+    },
+    "lcd/1792403667873.jpg": {
+      "source_sha256": "4c307b68f8d2f1743526b8819e1a2bf81cf21cd7d7e9c84d75fdd150c5d8a6e3",
+      "meter_type": "digital",
+      "decimal_places": 2,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": null,
+      "reason": "low_contrast_ambiguous_digits",
+      "reference_origin": "lcd_reference.json preserved"
+    },
+    "lcd/1792403667915.jpg": {
+      "source_sha256": "441d9606f3b31efd13f70f3ab3a8a8ff6ac5c0253aa194c1ae5850fe693f7659",
+      "meter_type": "digital",
+      "decimal_places": 2,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": "885943",
+      "reference_origin": "lcd_reference.json preserved"
+    },
+    "lcd/1792403668008.jpg": {
+      "source_sha256": "8518e3edb836cb462d0a42adb4b325a898bb468012f323e43b6d1e126d7f7e9b",
+      "meter_type": "digital",
+      "decimal_places": 2,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": "963715",
+      "reference_origin": "lcd_reference.json preserved"
+    },
+    "lcd/1792403668045.jpg": {
+      "source_sha256": "ef4cac44d04a5affc10a3bceab8ce2f101bb0206f7de901c04bca77ff36dde64",
+      "meter_type": "digital",
+      "decimal_places": 2,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": null,
+      "reason": "reflections_ambiguous_digits",
+      "reference_origin": "lcd_reference.json preserved"
+    },
+    "lcd/1792403668087.jpg": {
+      "source_sha256": "104151b782fadbed01b284b8669dc600a5003fbdd45e6e67bc0a198581cdcf9d",
+      "meter_type": "digital",
+      "decimal_places": 2,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": "815907",
+      "reference_origin": "lcd_reference.json preserved"
+    },
+    "lcd/1792403668125.jpg": {
+      "source_sha256": "25f9f59f6ec365f93ad2b0edb15364715c59dcc09371f0bb970ef98329b418a2",
+      "meter_type": "digital",
+      "decimal_places": 2,
+      "source": "user_confirmed_6973.16",
+      "raw_digits": "697316",
+      "initial_transcription": "697376",
+      "review_note": "User confirmed the reading is 6973.16; corrected assistant transcription, model prediction was correct.",
+      "reference_origin": "lcd_reference.json preserved"
+    },
+    "lcd/1792403668165.jpg": {
+      "source_sha256": "7405bf72652fe04799ee7f6d84ac75d9494d0388b4c239ca15fd8d5317a39f76",
+      "meter_type": "digital",
+      "decimal_places": 2,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": "776388",
+      "reference_origin": "lcd_reference.json preserved"
+    },
+    "lcd/1792403668205.jpg": {
+      "source_sha256": "f09d8cda1d8cab0ea737dc4a21802be2fa573cec3d62534ab4845c6b0430cd55",
+      "meter_type": "digital",
+      "decimal_places": 2,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": "685812",
+      "reference_origin": "lcd_reference.json preserved"
+    },
+    "lcd/1792403668242.jpg": {
+      "source_sha256": "9fb376894f753b61c2224fa5f32c8a948c05d5c16568b12d931c9edbf1eb1975",
+      "meter_type": "digital",
+      "decimal_places": 2,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": "697684",
+      "reference_origin": "lcd_reference.json preserved"
+    },
+    "lcd/1792403668275.jpg": {
+      "source_sha256": "db61263f33f50ffdb19fa36099007797b76a1c27d867c6416455f57d9c344b67",
+      "meter_type": "digital",
+      "decimal_places": 2,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": "14800166",
+      "reference_origin": "lcd_reference.json preserved"
+    },
+    "lcd/1792403668300.jpg": {
+      "source_sha256": "975d2888e2019ddfc11a25d490231f8f43bfc6a04e9f19c39bb42b49da33f2e0",
+      "meter_type": "digital",
+      "decimal_places": 2,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": "1462123",
+      "reference_origin": "lcd_reference.json preserved"
+    },
+    "lcd/1792416424865.jpg": {
+      "source_sha256": "ecbcb647d6e9cd54c818813269e7ccbfca5bfd5bd215c54ed2c439523006f6f3",
+      "meter_type": "digital",
+      "decimal_places": 2,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": "686153",
+      "reference_origin": "new visual review of last LCD contact sheet"
+    },
+    "lcd/1792416424886.jpg": {
+      "source_sha256": "8dafb6d267744b52379149a1377129909777d7ff0135e436b1ed971dce7d6003",
+      "meter_type": "digital",
+      "decimal_places": 2,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": "777462",
+      "reference_origin": "new visual review of last LCD contact sheet"
+    },
+    "lcd/1792416424903.jpg": {
+      "source_sha256": "be65ea0e466fce83d13c85b96af287917442979e4a308f912deca47564e8ba2d",
+      "meter_type": "digital",
+      "decimal_places": 2,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": "777462",
+      "reference_origin": "new visual review of last LCD contact sheet"
+    },
+    "wheel/1792403667565.jpg": {
+      "source_sha256": "5412d638537adddf85fc9a1c2782d4781a8b1438f25a9832fc5b61aba58b12c5",
+      "meter_type": "wheel",
+      "decimal_places": 1,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": "35520",
+      "review_note": "Reviewed all five unannotated wheel contact sheets; uncertain 5163 left unscored. Last-wheel transitions use previous digit."
+    },
+    "wheel/1792403667969.jpg": {
+      "source_sha256": "50b49f912db4f2d975e080765f9a5f46d90b8be9b0e420df0bf0dffb8598558e",
+      "meter_type": "wheel",
+      "decimal_places": 1,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": "003634",
+      "review_note": "Reviewed all five unannotated wheel contact sheets; uncertain 5163 left unscored. Last-wheel transitions use previous digit."
+    },
+    "wheel/1792416423878.jpg": {
+      "source_sha256": "e53e54d1cea2d95bd35408b498fe6b23059b89218e56254b8cf749ae140c3d3d",
+      "meter_type": "wheel",
+      "decimal_places": 1,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": "003733",
+      "review_note": "Reviewed all five unannotated wheel contact sheets; uncertain 5163 left unscored. Last-wheel transitions use previous digit."
+    },
+    "wheel/1792416423915.jpg": {
+      "source_sha256": "fe38027ebdeb4063c422839a57b655b137e7e31aaf8f412d3b5581dfc854817a",
+      "meter_type": "wheel",
+      "decimal_places": 1,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": "003733",
+      "review_note": "Reviewed all five unannotated wheel contact sheets; uncertain 5163 left unscored. Last-wheel transitions use previous digit."
+    },
+    "wheel/1792416423947.jpg": {
+      "source_sha256": "faa6c72afe28ced79016d248b238f8dd4b121fd505e7a791530eeff71e653c3b",
+      "meter_type": "wheel",
+      "decimal_places": 1,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": "003733",
+      "review_note": "Reviewed all five unannotated wheel contact sheets; uncertain 5163 left unscored. Last-wheel transitions use previous digit."
+    },
+    "wheel/1792416423981.jpg": {
+      "source_sha256": "2d404b7b08f71c6a1c21453b3d232e231c18b8cc2e857cef056e2ba539da2eb2",
+      "meter_type": "wheel",
+      "decimal_places": 1,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": "003733",
+      "review_note": "Reviewed all five unannotated wheel contact sheets; uncertain 5163 left unscored. Last-wheel transitions use previous digit."
+    },
+    "wheel/1792416424011.jpg": {
+      "source_sha256": "242573feb599c57b9b487f47683ff84713d4af770b4d0c027200617580c65927",
+      "meter_type": "wheel",
+      "decimal_places": 1,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": "003733",
+      "review_note": "Reviewed all five unannotated wheel contact sheets; uncertain 5163 left unscored. Last-wheel transitions use previous digit."
+    },
+    "wheel/1792416424039.jpg": {
+      "source_sha256": "ac6418ca262fb3b353e182aaaac434a96293722b19bfd7aab53b0af0575f3f9b",
+      "meter_type": "wheel",
+      "decimal_places": 1,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": "003733",
+      "review_note": "Reviewed all five unannotated wheel contact sheets; uncertain 5163 left unscored. Last-wheel transitions use previous digit."
+    },
+    "wheel/1792416424070.jpg": {
+      "source_sha256": "ecdbba46347a2733dbc4472310c036939bba3ce35db7521045dc0a15065a7e0a",
+      "meter_type": "wheel",
+      "decimal_places": 1,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": "003733",
+      "review_note": "Reviewed all five unannotated wheel contact sheets; uncertain 5163 left unscored. Last-wheel transitions use previous digit."
+    },
+    "wheel/1792416424095.jpg": {
+      "source_sha256": "2bef48bc0c208f49da9743a45e4548e110a74f3d3fde4c45e19e25f84f50fd13",
+      "meter_type": "wheel",
+      "decimal_places": 1,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": "003733",
+      "review_note": "Reviewed all five unannotated wheel contact sheets; uncertain 5163 left unscored. Last-wheel transitions use previous digit."
+    },
+    "wheel/1792416424122.jpg": {
+      "source_sha256": "57c1b205be5223483320794c0d23935653461106b4eb1b2fe72fbcc501374a97",
+      "meter_type": "wheel",
+      "decimal_places": 1,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": "003733",
+      "review_note": "Reviewed all five unannotated wheel contact sheets; uncertain 5163 left unscored. Last-wheel transitions use previous digit."
+    },
+    "wheel/1792416424151.jpg": {
+      "source_sha256": "f8e5a21bb27cb319109a1eeb7914eb16a49bcc3c5974cdc63d65a7f96bc2ffc5",
+      "meter_type": "wheel",
+      "decimal_places": 1,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": "003733",
+      "review_note": "Reviewed all five unannotated wheel contact sheets; uncertain 5163 left unscored. Last-wheel transitions use previous digit."
+    },
+    "wheel/1792416424179.jpg": {
+      "source_sha256": "e3a167ffdb69f9cf392c457a6f70f050023439c795a6fa7b73149d87fe63ee36",
+      "meter_type": "wheel",
+      "decimal_places": 1,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": "003733",
+      "review_note": "Reviewed all five unannotated wheel contact sheets; uncertain 5163 left unscored. Last-wheel transitions use previous digit."
+    },
+    "wheel/1792416424207.jpg": {
+      "source_sha256": "f72b08cdbf177db06fc4d76d446ad814e883366f876f0034ab3c749c84ead3cc",
+      "meter_type": "wheel",
+      "decimal_places": 1,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": "003733",
+      "review_note": "Reviewed all five unannotated wheel contact sheets; uncertain 5163 left unscored. Last-wheel transitions use previous digit."
+    },
+    "wheel/1792416424235.jpg": {
+      "source_sha256": "27a610c7851baf46de1fc9fd76c69bab4863df5371f3b8d821806934cea54e0c",
+      "meter_type": "wheel",
+      "decimal_places": 1,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": "003733",
+      "review_note": "Reviewed all five unannotated wheel contact sheets; uncertain 5163 left unscored. Last-wheel transitions use previous digit."
+    },
+    "wheel/1792416424266.jpg": {
+      "source_sha256": "6729f7404c269f0febc7a313539a23be76586b337d8671b08e1dbbaca4131480",
+      "meter_type": "wheel",
+      "decimal_places": 1,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": "003733",
+      "review_note": "Reviewed all five unannotated wheel contact sheets; uncertain 5163 left unscored. Last-wheel transitions use previous digit."
+    },
+    "wheel/1792416424298.jpg": {
+      "source_sha256": "8c6d859d4f1efccc90b9d5931cf89cf04a3002d5431fd859453c4d275741c311",
+      "meter_type": "wheel",
+      "decimal_places": 1,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": "003733",
+      "review_note": "Reviewed all five unannotated wheel contact sheets; uncertain 5163 left unscored. Last-wheel transitions use previous digit."
+    },
+    "wheel/1792416424328.jpg": {
+      "source_sha256": "0eb4140a685e9a030647753b8de224916aad38e52617d80e21dffeee190ea22f",
+      "meter_type": "wheel",
+      "decimal_places": 1,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": "003733",
+      "review_note": "Reviewed all five unannotated wheel contact sheets; uncertain 5163 left unscored. Last-wheel transitions use previous digit."
+    },
+    "wheel/1792416424355.jpg": {
+      "source_sha256": "8b9e74d026aa2f72bd1dbc22fd45d5eba059be2571121c15d17462f166f7686e",
+      "meter_type": "wheel",
+      "decimal_places": 1,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": "003733",
+      "review_note": "Reviewed all five unannotated wheel contact sheets; uncertain 5163 left unscored. Last-wheel transitions use previous digit."
+    },
+    "wheel/1792416424380.jpg": {
+      "source_sha256": "9506a9ab9ee05f1875d9e2f76f4636c934b581a6cb7b5ee7aae3090ed990f659",
+      "meter_type": "wheel",
+      "decimal_places": 1,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": "003733",
+      "review_note": "Reviewed all five unannotated wheel contact sheets; uncertain 5163 left unscored. Last-wheel transitions use previous digit."
+    },
+    "wheel/1792416424408.jpg": {
+      "source_sha256": "5c593ae171a3d2f2840721966c378f846282c1044b899aef5651c59994eea52f",
+      "meter_type": "wheel",
+      "decimal_places": 1,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": "003733",
+      "review_note": "Reviewed all five unannotated wheel contact sheets; uncertain 5163 left unscored. Last-wheel transitions use previous digit."
+    },
+    "wheel/1792416424435.jpg": {
+      "source_sha256": "651e90a9a3e5a33ff35ac930f09dfd13994b19219f700a8369cd462820f9ef41",
+      "meter_type": "wheel",
+      "decimal_places": 1,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": "003733",
+      "review_note": "Reviewed all five unannotated wheel contact sheets; uncertain 5163 left unscored. Last-wheel transitions use previous digit."
+    },
+    "wheel/1792416424465.jpg": {
+      "source_sha256": "6b6dafd346e98dc32adfeb0d8ff8bc96b737b74c71261a81936eaef735263cea",
+      "meter_type": "wheel",
+      "decimal_places": 1,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": "003733",
+      "review_note": "Reviewed all five unannotated wheel contact sheets; uncertain 5163 left unscored. Last-wheel transitions use previous digit."
+    },
+    "wheel/1792416424495.jpg": {
+      "source_sha256": "78a97df5e0d7ae37299414f9584851f9bd2e4110b34974e053746d692c77dbe6",
+      "meter_type": "wheel",
+      "decimal_places": 1,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": "003733",
+      "review_note": "Reviewed all five unannotated wheel contact sheets; uncertain 5163 left unscored. Last-wheel transitions use previous digit."
+    },
+    "wheel/1792416424530.jpg": {
+      "source_sha256": "f76db423b874f8e432c6c72c572f55593641c56ad622158e92de68bc49d06de6",
+      "meter_type": "wheel",
+      "decimal_places": 1,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": "003733",
+      "review_note": "Reviewed all five unannotated wheel contact sheets; uncertain 5163 left unscored. Last-wheel transitions use previous digit."
+    },
+    "wheel/1792416424560.jpg": {
+      "source_sha256": "db3bb4642c8ee1b11d5d308df638f862de656c04a34b78c1f4df0adb472e262f",
+      "meter_type": "wheel",
+      "decimal_places": 1,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": "003733",
+      "review_note": "Reviewed all five unannotated wheel contact sheets; uncertain 5163 left unscored. Last-wheel transitions use previous digit."
+    },
+    "wheel/1792416424589.jpg": {
+      "source_sha256": "8ae9e5f7f633e5dbe96f1c88381fdd35f5d843137d58d95f92e46faeb94c0fd6",
+      "meter_type": "wheel",
+      "decimal_places": 1,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": "003733",
+      "review_note": "Reviewed all five unannotated wheel contact sheets; uncertain 5163 left unscored. Last-wheel transitions use previous digit."
+    },
+    "wheel/1792416424618.jpg": {
+      "source_sha256": "4e4eb81b3ec1cd657f96f56a3aa458596dcf00b71d238628b0b2ce827f471141",
+      "meter_type": "wheel",
+      "decimal_places": 1,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": "003733",
+      "review_note": "Reviewed all five unannotated wheel contact sheets; uncertain 5163 left unscored. Last-wheel transitions use previous digit."
+    },
+    "wheel/1792416424649.jpg": {
+      "source_sha256": "10d35fc5dbf09b02fe81aaebee699ba11dcd03e22d5cd49ec7b9189e9b39d398",
+      "meter_type": "wheel",
+      "decimal_places": 1,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": "003733",
+      "review_note": "Reviewed all five unannotated wheel contact sheets; uncertain 5163 left unscored. Last-wheel transitions use previous digit."
+    },
+    "wheel/1792416424681.jpg": {
+      "source_sha256": "4b40ad0804d187caecc7429893dde512cca2fa8312597eb5653a8df2c76ad869",
+      "meter_type": "wheel",
+      "decimal_places": 1,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": "003733",
+      "review_note": "Reviewed all five unannotated wheel contact sheets; uncertain 5163 left unscored. Last-wheel transitions use previous digit."
+    },
+    "wheel/1792416424713.jpg": {
+      "source_sha256": "3826adcd9d44669ce58c5d3131a6c4ae2b030a7b3566c32b8bf5132d603092f6",
+      "meter_type": "wheel",
+      "decimal_places": 1,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": "003733",
+      "review_note": "Reviewed all five unannotated wheel contact sheets; uncertain 5163 left unscored. Last-wheel transitions use previous digit."
+    },
+    "wheel/1792416424743.jpg": {
+      "source_sha256": "20e2efcbbd4635e6e4ae6a95a63fb21df6a8b51bff47eae390940ee7f7ce8f76",
+      "meter_type": "wheel",
+      "decimal_places": 1,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": "003733",
+      "review_note": "Reviewed all five unannotated wheel contact sheets; uncertain 5163 left unscored. Last-wheel transitions use previous digit."
+    },
+    "wheel/1792416424759.jpg": {
+      "source_sha256": "d7e96ec71affa508574ff4580f5615ca988f5229f47a3f1b5911fb7fa0514739",
+      "meter_type": "wheel",
+      "decimal_places": 1,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": "003733",
+      "review_note": "Reviewed all five unannotated wheel contact sheets; uncertain 5163 left unscored. Last-wheel transitions use previous digit."
+    },
+    "wheel/1792416424775.jpg": {
+      "source_sha256": "880e882a45bc86f86a4c522b718dac677f2c3eede0402234ebb729b4f1cf4430",
+      "meter_type": "wheel",
+      "decimal_places": 1,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": "003733",
+      "review_note": "Reviewed all five unannotated wheel contact sheets; uncertain 5163 left unscored. Last-wheel transitions use previous digit."
+    },
+    "wheel/1792416424791.jpg": {
+      "source_sha256": "36cdf47eb68f8f5fa8ccba9dbab99949f7bbc5c725483491ff6c602c5e32e76d",
+      "meter_type": "wheel",
+      "decimal_places": 1,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": "003733",
+      "review_note": "Reviewed all five unannotated wheel contact sheets; uncertain 5163 left unscored. Last-wheel transitions use previous digit."
+    },
+    "wheel/1792416424803.jpg": {
+      "source_sha256": "74aba4572a3b6ace6c3f736eb352c61d2e342d7ff599040e0d3538a2cf794e32",
+      "meter_type": "wheel",
+      "decimal_places": 1,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": "003733",
+      "review_note": "Reviewed all five unannotated wheel contact sheets; uncertain 5163 left unscored. Last-wheel transitions use previous digit."
+    },
+    "wheel/1792416424819.jpg": {
+      "source_sha256": "1edb3f8e67988eae8eb9d94dce853aa1f51366b1d3f4f0fd655de5fa2a3efdeb",
+      "meter_type": "wheel",
+      "decimal_places": 1,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": "003733",
+      "review_note": "Reviewed all five unannotated wheel contact sheets; uncertain 5163 left unscored. Last-wheel transitions use previous digit."
+    },
+    "wheel/1792416424834.jpg": {
+      "source_sha256": "f802f1b9886e812336b39c0b17f8e7a36016b48a6d36998cc5edafec776cd0e6",
+      "meter_type": "wheel",
+      "decimal_places": 1,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": "003733",
+      "review_note": "Reviewed all five unannotated wheel contact sheets; uncertain 5163 left unscored. Last-wheel transitions use previous digit."
+    },
+    "wheel/1792416424849.jpg": {
+      "source_sha256": "56f235dcea7fdb93125e3de14503d1b7aa8a116edba9c06af2a9e4769333cc09",
+      "meter_type": "wheel",
+      "decimal_places": 1,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": "003733",
+      "review_note": "Reviewed all five unannotated wheel contact sheets; uncertain 5163 left unscored. Last-wheel transitions use previous digit."
+    },
+    "wheel/1792416424922.jpg": {
+      "source_sha256": "15e345ba18707aa0c2006be6ecfca1ee0c89fa557e05e02e3f1583d6f4c3f9ce",
+      "meter_type": "wheel",
+      "decimal_places": 1,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": "36613",
+      "review_note": "Reviewed all five unannotated wheel contact sheets; uncertain 5163 left unscored. Last-wheel transitions use previous digit."
+    },
+    "wheel/1792416424941.jpg": {
+      "source_sha256": "f3c65119f266a3bd720116c75fb160c407e030ab899373f46187f58219282d92",
+      "meter_type": "wheel",
+      "decimal_places": 1,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": "36613",
+      "review_note": "Reviewed all five unannotated wheel contact sheets; uncertain 5163 left unscored. Last-wheel transitions use previous digit."
+    },
+    "wheel/1792416424962.jpg": {
+      "source_sha256": "a8028c2d8c90245032ae1e65231923d3d70ef31acc6bfe3714ef653768907e5e",
+      "meter_type": "wheel",
+      "decimal_places": 1,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": "36613",
+      "review_note": "Reviewed all five unannotated wheel contact sheets; uncertain 5163 left unscored. Last-wheel transitions use previous digit."
+    },
+    "wheel/1792416424985.jpg": {
+      "source_sha256": "b23d8489432c41cd5c2ca17d545f93baae40128f96c317b2a33a284574aaabc0",
+      "meter_type": "wheel",
+      "decimal_places": 1,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": "36613",
+      "review_note": "Reviewed all five unannotated wheel contact sheets; uncertain 5163 left unscored. Last-wheel transitions use previous digit."
+    },
+    "wheel/1792416425011.jpg": {
+      "source_sha256": "767df99761e6ac40109dc4319f676e2ce094d8c44e376e45477e15036fe3d94e",
+      "meter_type": "wheel",
+      "decimal_places": 1,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": "36613",
+      "review_note": "Reviewed all five unannotated wheel contact sheets; uncertain 5163 left unscored. Last-wheel transitions use previous digit."
+    },
+    "wheel/1792416425038.jpg": {
+      "source_sha256": "3406f3945df2bf0ae2149a31eeca256782f425e990a3380c82db7c92ff202793",
+      "meter_type": "wheel",
+      "decimal_places": 1,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": "36613",
+      "review_note": "Reviewed all five unannotated wheel contact sheets; uncertain 5163 left unscored. Last-wheel transitions use previous digit."
+    },
+    "wheel/1792416425063.jpg": {
+      "source_sha256": "c7ee60d2cce8988ea2e344411122304709ffc1e5774f00ce47fd4c6eaf4ef4d8",
+      "meter_type": "wheel",
+      "decimal_places": 1,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": "36613",
+      "review_note": "Reviewed all five unannotated wheel contact sheets; uncertain 5163 left unscored. Last-wheel transitions use previous digit."
+    },
+    "wheel/1792416425090.jpg": {
+      "source_sha256": "28f1556a0ce1bada00e8f617eb3c972bbf9d4193656751fdcc9545738943db55",
+      "meter_type": "wheel",
+      "decimal_places": 1,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": "36613",
+      "review_note": "Reviewed all five unannotated wheel contact sheets; uncertain 5163 left unscored. Last-wheel transitions use previous digit."
+    },
+    "wheel/1792416425117.jpg": {
+      "source_sha256": "e8c45f3e6131439372affb872d6752549b6b7d4271e2a4316c3d80a888c454fe",
+      "meter_type": "wheel",
+      "decimal_places": 1,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": "36613",
+      "review_note": "Reviewed all five unannotated wheel contact sheets; uncertain 5163 left unscored. Last-wheel transitions use previous digit."
+    },
+    "wheel/1792416425142.jpg": {
+      "source_sha256": "7e9209153abd6760cb8e9c27b381eb210992f03f6809ac62afb62334c0da3190",
+      "meter_type": "wheel",
+      "decimal_places": 1,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": "36613",
+      "review_note": "Reviewed all five unannotated wheel contact sheets; uncertain 5163 left unscored. Last-wheel transitions use previous digit."
+    },
+    "wheel/1792416425163.jpg": {
+      "source_sha256": "1326da28f76f1bf3b4141e238c05fce96b0abe12454f6d968398e509c4414e42",
+      "meter_type": "wheel",
+      "decimal_places": 1,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": null,
+      "reason": "severe_motion_blur_cannot_independently_confirm_full_string_from_this_frame",
+      "review_note": "Reviewed all five unannotated wheel contact sheets; uncertain 5163 left unscored. Last-wheel transitions use previous digit."
+    },
+    "wheel/1792416425184.jpg": {
+      "source_sha256": "7ff863f0055819c7bbc77a51f07a860d88d4d9547ce0831fb23e716a262a44b2",
+      "meter_type": "wheel",
+      "decimal_places": 1,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": "36613",
+      "review_note": "Reviewed all five unannotated wheel contact sheets; uncertain 5163 left unscored. Last-wheel transitions use previous digit."
+    },
+    "wheel/1792416425207.jpg": {
+      "source_sha256": "80d1d76be119a1c4058c27ee6a3dfc82718dd301615a032d7df8bdb6a96fb83e",
+      "meter_type": "wheel",
+      "decimal_places": 1,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": "36613",
+      "review_note": "Reviewed all five unannotated wheel contact sheets; uncertain 5163 left unscored. Last-wheel transitions use previous digit."
+    },
+    "wheel/1792416425230.jpg": {
+      "source_sha256": "4c4be404265457d8f16c67358da2f4945db07aea546824cd9f3a14ffcb9bd80d",
+      "meter_type": "wheel",
+      "decimal_places": 1,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": "36613",
+      "review_note": "Reviewed all five unannotated wheel contact sheets; uncertain 5163 left unscored. Last-wheel transitions use previous digit."
+    },
+    "test_wheel/1792476679494.jpg": {
+      "source_sha256": "006ec2721edf1f3f507650069ee610e4d8ea7c98d4041d2959319b41588ab447",
+      "meter_type": "wheel",
+      "decimal_places": 1,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": "01792",
+      "review_note": "Unfinished last-wheel carry uses previous digit, one decimal place; no-area cases reviewed from separately cropped original pixels."
+    },
+    "test_wheel/1792476679554.jpg": {
+      "source_sha256": "546442f8ce0bd21f8bf7966209e8c82d524e3ed23f3fed36010b065bc507ce92",
+      "meter_type": "wheel",
+      "decimal_places": 1,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": "01792",
+      "review_note": "Unfinished last-wheel carry uses previous digit, one decimal place; no-area cases reviewed from separately cropped original pixels."
+    },
+    "test_wheel/1792476679632.jpg": {
+      "source_sha256": "ae1c6d772d5237b0d7d5029a0790ebe21814f579a7e62cb921ccbb5252acf51c",
+      "meter_type": "wheel",
+      "decimal_places": 1,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": "01792",
+      "review_note": "Unfinished last-wheel carry uses previous digit, one decimal place; no-area cases reviewed from separately cropped original pixels."
+    },
+    "test_wheel/1792476679756.jpg": {
+      "source_sha256": "2f1178e20bbae5a88e044e41432ad3d46adfb68a90dfca15fd1df273b18a7ce6",
+      "meter_type": "wheel",
+      "decimal_places": 1,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": "98362",
+      "review_note": "Unfinished last-wheel carry uses previous digit, one decimal place; no-area cases reviewed from separately cropped original pixels."
+    },
+    "test_wheel/1792476679825.jpg": {
+      "source_sha256": "112879ef52516616577e8ed97b4acf9a85cbeb5b36e1882cc4ce4ccb5e0f1794",
+      "meter_type": "wheel",
+      "decimal_places": 1,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": "98362",
+      "review_note": "Unfinished last-wheel carry uses previous digit, one decimal place; no-area cases reviewed from separately cropped original pixels."
+    },
+    "test_wheel/1792476679923.jpg": {
+      "source_sha256": "2afb0481a054db259362a3a6631516c58a15728e1b428195172281d248896305",
+      "meter_type": "wheel",
+      "decimal_places": 1,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": "22089",
+      "review_note": "Unfinished last-wheel carry uses previous digit, one decimal place; no-area cases reviewed from separately cropped original pixels."
+    },
+    "test_wheel/1792476679989.jpg": {
+      "source_sha256": "46bd2df6a79c4da280c2cd91d385953ffd14de54df16fee5045a4ee1bd5986bc",
+      "meter_type": "wheel",
+      "decimal_places": 1,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": "22089",
+      "review_note": "Unfinished last-wheel carry uses previous digit, one decimal place; no-area cases reviewed from separately cropped original pixels."
+    },
+    "test_wheel/1792476680036.jpg": {
+      "source_sha256": "b97c4e11148fbf87d03501479fee71ac9ee2b2beb38774868c1f0b9fa7a2798d",
+      "meter_type": "wheel",
+      "decimal_places": 1,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": "07071",
+      "review_note": "Unfinished last-wheel carry uses previous digit, one decimal place; no-area cases reviewed from separately cropped original pixels."
+    },
+    "test_wheel/1792476680073.jpg": {
+      "source_sha256": "eef5d0172b4b67d971bc15c98dd33d346c640c8c11dfc2ec7c17bc6c21c61ec3",
+      "meter_type": "wheel",
+      "decimal_places": 1,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": "07071",
+      "review_note": "Unfinished last-wheel carry uses previous digit, one decimal place; no-area cases reviewed from separately cropped original pixels."
+    },
+    "test_wheel/1792476680134.jpg": {
+      "source_sha256": "4f418bef200c7a7f265b3d5a2df8bf084bc9005fe331d5a747846a23f33ae134",
+      "meter_type": "wheel",
+      "decimal_places": 1,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": "07071",
+      "review_note": "Unfinished last-wheel carry uses previous digit, one decimal place; no-area cases reviewed from separately cropped original pixels."
+    },
+    "test_wheel/1792476680163.jpg": {
+      "source_sha256": "e04962947b16944354db1ac71c1e527d042c5c3b2788cf3aea6d512f8dccc143",
+      "meter_type": "wheel",
+      "decimal_places": 1,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": "02816",
+      "review_note": "Unfinished last-wheel carry uses previous digit, one decimal place; no-area cases reviewed from separately cropped original pixels."
+    },
+    "test_wheel/1792476680198.jpg": {
+      "source_sha256": "98e0429fb7acc50a2249951b39fee6b4914fa672d395cea8ebd922486691ae77",
+      "meter_type": "wheel",
+      "decimal_places": 1,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": "78921",
+      "review_note": "Unfinished last-wheel carry uses previous digit, one decimal place; no-area cases reviewed from separately cropped original pixels."
+    },
+    "test_wheel/1792476680319.jpg": {
+      "source_sha256": "0d27683a8efe68bb3254b30e15fc547e39f24109565d6284fce8d048181426fc",
+      "meter_type": "wheel",
+      "decimal_places": 1,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": "76172",
+      "review_note": "Unfinished last-wheel carry uses previous digit, one decimal place; no-area cases reviewed from separately cropped original pixels."
+    },
+    "test_wheel/1792476680444.jpg": {
+      "source_sha256": "5c7f8fe5e680e983e11c508ed9890a11d25fd65da5a6710899865ca178a889b0",
+      "meter_type": "wheel",
+      "decimal_places": 1,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": "53698",
+      "review_note": "Unfinished last-wheel carry uses previous digit, one decimal place; no-area cases reviewed from separately cropped original pixels."
+    },
+    "test_wheel/1792476680578.jpg": {
+      "source_sha256": "63a26a90346e1985a32d14c8fb494ee3fdbdbb96066599db9f697721b81ab8af",
+      "meter_type": "wheel",
+      "decimal_places": 1,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": "76172",
+      "review_note": "Unfinished last-wheel carry uses previous digit, one decimal place; no-area cases reviewed from separately cropped original pixels."
+    },
+    "test_wheel/1792476680639.jpg": {
+      "source_sha256": "f4e11a699c58019948182ac40b6f37ad965d3e5fcc81f85cd34f69af9c074031",
+      "meter_type": "wheel",
+      "decimal_places": 1,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": "94984",
+      "review_note": "Unfinished last-wheel carry uses previous digit, one decimal place; no-area cases reviewed from separately cropped original pixels."
+    },
+    "test_wheel/1792476680696.jpg": {
+      "source_sha256": "6033ada52e962c76a00fafa15b9af4c54c336402a0310403edbdbb1366d0445f",
+      "meter_type": "wheel",
+      "decimal_places": 1,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": "94984",
+      "review_note": "Unfinished last-wheel carry uses previous digit, one decimal place; no-area cases reviewed from separately cropped original pixels."
+    },
+    "test_wheel/1792476680762.jpg": {
+      "source_sha256": "6d495fdebb86085de708b716312bf3dd569ed3587171d4a350ec2d36674598af",
+      "meter_type": "wheel",
+      "decimal_places": 1,
+      "source": "assistant_visual_review_of_unannotated_original_photo_or_crop",
+      "raw_digits": "94984",
+      "review_note": "Unfinished last-wheel carry uses previous digit, one decimal place; no-area cases reviewed from separately cropped original pixels."
+    }
+  }
+}

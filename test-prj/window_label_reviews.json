@@ -1,0 +1,235 @@
+{
+  "schema_version": 1,
+  "review_method": "Assistant visual review of all source contact sheets; enlarged ambiguous cases. File hashes bind overrides to reviewed images and labels.",
+  "rules": {
+    "Digital Meter.v1i.yolov8/102_jpg": {
+      "type": "wheel",
+      "reason": "Visually reviewed: display label encloses mechanical number rollers, not an electronic screen.",
+      "files": {
+        "102_jpg.rf.2b2a46142e399739f61c6a832c2d1dec.jpg": [
+          "cc35e15428543ca9a9067f1c6bee8e946977aefa2ef11af532b6a66eb7838a98",
+          "700e47052f2c3b9c1259dd454bc7a4fe47b2bb3749e446398b33dd6fd15f3d09"
+        ]
+      }
+    },
+    "Digital Meter.v1i.yolov8/118_jpg": {
+      "type": "wheel",
+      "reason": "Visually reviewed: display label encloses mechanical number rollers, not an electronic screen.",
+      "files": {
+        "118_jpg.rf.d299e9d60a1a6d6f6ed9537e88852d39.jpg": [
+          "8b8ca16bf0b61c468f39bc8e9d64b2958ac2c733cb8356acb035775ad8d9ab27",
+          "55f2f74e59a22db3a5ba1074d227c8ef74d318939bb8c50562c3dc0b82fc1621"
+        ]
+      }
+    },
+    "Digital Meter.v1i.yolov8/5_jpg": {
+      "type": "wheel",
+      "reason": "Visually reviewed: display label encloses mechanical number rollers, not an electronic screen.",
+      "files": {
+        "5_jpg.rf.ae1a481f9065317a24d88d559e31c26e.jpg": [
+          "f337c0dc8fbc61b04f0ce184c7b329bc1ffbccc52d073643ad99dc8c42a0a991",
+          "d2f0f0e9ba39c14bb1497e00613bb946f1ed7d8f0525065d8c6219b2e273d57e"
+        ]
+      }
+    },
+    "Digital Meter.v1i.yolov8/62_jpg": {
+      "type": "wheel",
+      "reason": "Visually reviewed: display label encloses mechanical number rollers, not an electronic screen.",
+      "files": {
+        "62_jpg.rf.c25916610a4ebbf6bdbeb4e1882ee897.jpg": [
+          "4bdab28a9944a7276562fba1e71751fced59dce2ec56d51c9806efedcac1a5bd",
+          "afb2280f7763057d582df7b95e7633f6207b7ec37e0fa4d1b3a6c533f38927e0"
+        ]
+      }
+    },
+    "Digital Meter.v1i.yolov8/68_jpg": {
+      "type": "wheel",
+      "reason": "Visually reviewed: display label encloses mechanical number rollers, not an electronic screen.",
+      "files": {
+        "68_jpg.rf.0888fdd354b8d11a1f93ac0f57beecc7.jpg": [
+          "9b67113778a5766c799ac703bc9b374ec3a5fc65f8fa98942b4ac56d84014d8c",
+          "e8498fcf13431823ac83557219263841381869da971ef76288dfe8e48cce97f7"
+        ]
+      }
+    },
+    "Digital Meter.v1i.yolov8/69_jpg": {
+      "type": "wheel",
+      "reason": "Visually reviewed: display label encloses mechanical number rollers, not an electronic screen.",
+      "files": {
+        "69_jpg.rf.997a10e9bde772df6f05ac6bba90e6f6.jpg": [
+          "55a8e27fe947a4c085e5d61599251ca2d47b7e7d364de484dafe04c6864677e5",
+          "a77628d69b4d14551813101530a4f2e5fcbb2ee850bb8f585a1347e8ea6b8582"
+        ]
+      }
+    },
+    "Digital Meter.v1i.yolov8/75_jpg": {
+      "type": "wheel",
+      "reason": "Visually reviewed: display label encloses mechanical number rollers, not an electronic screen.",
+      "files": {
+        "75_jpg.rf.5e9460b34bccdb5ac30a3b09e47f3931.jpg": [
+          "5c7918fb8cc294354880f53939d5969add416a8fd3c4c157aeed3d22d62d274e",
+          "a75811bae55267d090465979e5c8183bce79fc3993629e8ecc2d52bab17d64e7"
+        ]
+      }
+    },
+    "Digital Meter.v1i.yolov8/88_jpg": {
+      "type": "wheel",
+      "reason": "Visually reviewed: display label encloses mechanical number rollers, not an electronic screen.",
+      "files": {
+        "88_jpg.rf.005a506792343f82aa2035a2c4a55e78.jpg": [
+          "485380d6d93911c24337555c7dbfe5a867d8de395362f082b7b96f8c07d38859",
+          "8e830cdd00fc3e62641e7e98bfc210d5c7b66de26cbd3b995cb623adafa45b1e"
+        ]
+      }
+    },
+    "Digital Meter.v1i.yolov8/89_jpg": {
+      "type": "wheel",
+      "reason": "Visually reviewed: display label encloses mechanical number rollers, not an electronic screen.",
+      "files": {
+        "89_jpg.rf.7c6b3a6c746a1f2399ee7878eaff566c.jpg": [
+          "bacb17664799fde2897583f4333946ac1366a8551d40d185d58675afb03cbbdc",
+          "e4e26ea420c17a314a18d9e49b09756e2e79e94676b94fb4a7a37f0d02bd481a"
+        ]
+      }
+    },
+    "Digital Meter.v1i.yolov8/92_jpg": {
+      "type": "wheel",
+      "reason": "Visually reviewed: display label encloses mechanical number rollers, not an electronic screen.",
+      "files": {
+        "92_jpg.rf.e3b398524f23240075fbe25518a04c85.jpg": [
+          "8d0ef60d860a10a5d685b1363a23f61c2b58b96a8de4248a564a5ee18c4dab9c",
+          "6c7c8ab57cd72636b885fab626ce82dc76f4720bff4cd2361bcbecb835ef4db1"
+        ]
+      }
+    },
+    "Digital Meter.v1i.yolov8/97_jpg": {
+      "type": "wheel",
+      "reason": "Visually reviewed: display label encloses mechanical number rollers, not an electronic screen.",
+      "files": {
+        "97_jpg.rf.516121e2a2e7e0d1da71d43cf5dd215f.jpg": [
+          "a9803da961a6783e6c35732d8351e0bfb3f12c5ff97d098fb699e230e39b8ede",
+          "c2cfa55450f96f8e2ebfd417c4972c8370e5fbee4d93f4b0348339d493db7851"
+        ]
+      }
+    },
+    "Digital Meter.v1i.yolov8/85_jpg": {
+      "type": "wheel",
+      "reason": "Visually reviewed: display label encloses mechanical number rollers, not an electronic screen.",
+      "files": {
+        "85_jpg.rf.70105ada45e94c8ba15fb61950dafd95.jpg": [
+          "c9f4a494f3e214b146aae5ba9f9e60a7658bfa73e23c85ab40ef320ec180e156",
+          "a94304ea2a7e71ba88abc3b2eb3c5cd9ef3c0606660dc1442f6386b40220c9e1"
+        ]
+      }
+    },
+    "meter-reader-detection.v5i.yolov8/550_SML_3PH_2_jpg": {
+      "type": "lcd",
+      "reason": "Visually reviewed LCD screen; typed whole-meter label is absent.",
+      "files": {
+        "550_SML_3PH_2_jpg.rf.0887c7f5ac27ec782dcce4a9844144f5.jpg": [
+          "35f7669c76283f3dd9886c680f3ee9341a53e9459ca44a596377adc9ff19e182",
+          "74bb1668ce829f68f3c7856d0ee2e8df35ec3d2e97003ea644dd61ab1cd2932c"
+        ],
+        "550_SML_3PH_2_jpg.rf.5a51f6e3c8d54a77835a3c451d39a2d8.jpg": [
+          "30997e50060a3af1a436e383ca2504bea4ed431e528c75e48f15e9853f4c6ea9",
+          "51696b7a7e65a72e0df143f068d4c0d0f540158973c8282a109fda2ef94da780"
+        ],
+        "550_SML_3PH_2_jpg.rf.6356ad8c5584c04e6f80994ef7237de1.jpg": [
+          "a1309d9d3b1438b263cbf4088e2e187b41a0346ad6b972aea05f8b182c9d58ec",
+          "2aef5ac65842231e6f146a09d7ab8678007c85238271d856b579032e0f2f564a"
+        ]
+      }
+    },
+    "meter-reader-detection.v5i.yolov8/565_Genus_3PH_jpg": {
+      "type": "lcd",
+      "reason": "Visually reviewed LCD screen; typed whole-meter label is absent.",
+      "files": {
+        "565_Genus_3PH_jpg.rf.53d183eec9b53bb6f48f54c91f0a4583.jpg": [
+          "75eb423be5fc805116caeeee986fe534e9554cfc8f9e9545ebd2e748384b2828",
+          "d4e09380129c2cd8e5433b21fd1b1a0db8443a223e2bf9bcc16bb9a22a2cb9e6"
+        ],
+        "565_Genus_3PH_jpg.rf.7c2a3178a42a2692fe9e24c0d206e57a.jpg": [
+          "cb0350ce021d15ea76becbad9fd1bbd85455bf3b357eaa65cdb56c312cab2ee1",
+          "57a4fe77266433ebe5903aa35f536af21baeb6ced94161f60573870f5f667b8d"
+        ],
+        "565_Genus_3PH_jpg.rf.d17809cab17f208e0ab7c46293e88471.jpg": [
+          "b579ea34e6662f995e63c9730cc88dddad12992ba5e5d18a70bb442544a1b184",
+          "830a89aafc529233fb38434bc0b667312a92d97eb489784f5a2f5a667a08e844"
+        ]
+      }
+    },
+    "meter-reader-detection.v5i.yolov8/582_Genus_1PH_3_jpg": {
+      "type": "lcd",
+      "drop_largest_reading": true,
+      "reason": "Visually reviewed LCD screen; typed whole-meter label is absent. Extra largest Reading polygon incorrectly encloses the whole meter; remove it.",
+      "files": {
+        "582_Genus_1PH_3_jpg.rf.6f1179b08dac9af443891ef15ee79a46.jpg": [
+          "4f757a7f7bab5d3d94736597c7e662297ac8432b831d45788a1723d81821278b",
+          "a41ddae93f14388fbe697e4dfb315468ed6c7c54d46fb14aacae8043fa9f72bc"
+        ],
+        "582_Genus_1PH_3_jpg.rf.814681c09e4597cda5aaaeb9becf14d7.jpg": [
+          "75165360016d1d6ba9e2c2d4b81c1468764814a080f92b9ae0ce50e810431a14",
+          "e19fd485a05e51ba51cb9727c3157b2fc6047f422241090b0e79687f3fb6a123"
+        ],
+        "582_Genus_1PH_3_jpg.rf.96d9fe26d14632eb094faf3177fceac3.jpg": [
+          "1c8d9e0e9ad141f485c0542d2c3daf3fae7cb6703e8c58c0d4956283ecf2b08d",
+          "3ed7500d74cda4c99b8c4797b66a782b39535ef6fb9d0d3bbe57c15c9a2704a6"
+        ]
+      }
+    },
+    "meter-reader-detection.v5i.yolov8/585_SML_1PH_3_jpg": {
+      "type": "lcd",
+      "reason": "Visually reviewed LCD screen; typed whole-meter label is absent.",
+      "files": {
+        "585_SML_1PH_3_jpg.rf.20e8c38067dd14a64811099ecdb61d2b.jpg": [
+          "663afc0bdacdab2e68073659fd57d6ce6d77e27fb9bff30f5598c0d8b346138a",
+          "2daa5058ddf940f76701681747904a0bf687394e7d40350bff3631b10897a9b3"
+        ],
+        "585_SML_1PH_3_jpg.rf.9899b4512564b45d07d9a66d6dd89fba.jpg": [
+          "3b5ba3bde6f8d639ae4249999b68201e1da994d18651f2ff802d12f1c6c1e90a",
+          "cf4b41474c766a75a0f50372910d500274750150e40e35156ad658b2d4a70477"
+        ],
+        "585_SML_1PH_3_jpg.rf.d61faba454a08d9088faee9071811a28.jpg": [
+          "25c843c3729223bd6a873703f8d62a764e14165327e461936c4a38bebf75da45",
+          "b4a6f5b87729ce0ddd6e9ecdc32e82146d8fddc580fc20091ead4673da69a350"
+        ]
+      }
+    },
+    "meter-reader-detection.v5i.yolov8/590_L-G_1PH_2_jpg": {
+      "type": "lcd",
+      "reason": "Visually reviewed LCD screen; typed whole-meter label is absent.",
+      "files": {
+        "590_L-G_1PH_2_jpg.rf.0ad8ff8e405265dd6873b4eb5fbf9be7.jpg": [
+          "f63b48105e51855d21326f6bbbb6d8618f914d51ce8a5f8f9e416b29d0df7dd2",
+          "c46e14125ab996930e949473608d0f3128eb9ecbcb7ee9a1e108f0a6c43d14a2"
+        ],
+        "590_L-G_1PH_2_jpg.rf.45790c6bb36b621847325a1d32e6e6d7.jpg": [
+          "ada1847731cdaa6ad0c4c4d491f0490018ef09e45ba6b5f5509b33a624aaf50d",
+          "2f8fe00c1f29367641101a1e29003c582492c486725d6a55d8a24f0d1845b92b"
+        ],
+        "590_L-G_1PH_2_jpg.rf.b1226af8af052e27209781c8e50fd29e.jpg": [
+          "ecca8a25e951110f3ad8b3bab63d891369bfe279aeb260aa1dbc849cf21078f2",
+          "865de7a1a4ac87093d4618c94ce7dec195eb433eab01f51f03ccc1e1137e32de"
+        ]
+      }
+    },
+    "meter-reader-detection.v5i.yolov8/815_L-G_jpg": {
+      "exclude": true,
+      "reason": "Visually reviewed: pointer dials, outside the LCD/electronic-screen versus number-roller scope.",
+      "files": {
+        "815_L-G_jpg.rf.303de76b5fcd4a98346cd5ee05b44159.jpg": [
+          "caec327e4a8c8948c4191f904be8d8d3ee6d0760d3b604f9a838d0e7cdab0f38",
+          "d08ed4a9ddae8c3449da8c26eb9c48f3fb2b840784cb9cb8c7fa13f04791bef4"
+        ],
+        "815_L-G_jpg.rf.8eb4f11cecf876fa57dae3ba44ad4af4.jpg": [
+          "f19b8ccd60dde7e9a16dd18b9e527709e3dd902894cf501312ab6f9f6fdb974e",
+          "8a9f09d3b64049d64bd02bb71749c86f956e922c7efa85f4a6e456a0e2aae59f"
+        ],
+        "815_L-G_jpg.rf.9166103fcdabca3a2c00e42612d66e66.jpg": [
+          "ce6ee7e45f6a356ced6cfa4b497edfb3c4bbfcc11fb67de7fbe23552a7129a67",
+          "9319bb7f82e93d139e7f9bfcceeaef3fefe920d8261f73a24074317d091e9bb0"
+        ]
+      }
+    }
+  }
+}
